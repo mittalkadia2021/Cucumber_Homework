@@ -7,7 +7,6 @@ import java.sql.Timestamp;
 
 public class Registration_Result_Page extends Utils {
     LoadProperty loadProperty = new LoadProperty();
-    private Timestamp timestamp = new Timestamp(System.currentTimeMillis());
     private By _register_actualResult = By.xpath("//div[contains(text(),'Your registration completed')]");
 
 

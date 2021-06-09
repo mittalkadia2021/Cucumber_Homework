@@ -3,6 +3,7 @@ package org.example;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import java.sql.CallableStatement;
 import java.sql.Timestamp;
 
 public class RegisterPage extends Utils {
@@ -21,7 +22,7 @@ public class RegisterPage extends Utils {
     private By _password = By.xpath("(//input[contains(@id, 'Password')])[1]");
     private By _confirm_password = By.xpath("(//input[contains(@id, 'Password')])[2]");
     private By _register_button = By.xpath("//button[contains(text(),'Register')]");
-    private Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
 
 
     public void registration_Successfully() {
@@ -37,7 +38,7 @@ public class RegisterPage extends Utils {
         thread_Sleep();
         enterText(_firstName, loadProperty.getProperty("Firstname"));
         //type last name
-        thread_Sleep();
+        waitForClickable(_lastname,10);
         enterText(_lastname, loadProperty.getProperty("Lastname"));
         //enter date of birth
         thread_Sleep();
@@ -48,7 +49,7 @@ public class RegisterPage extends Utils {
         thread_Sleep();
         selectFromDropdownByVisibleText(_birth_year, loadProperty.getProperty("BirthYear"));
         //Type email with timestamp
-        enterText(_email, loadProperty.getProperty("Email") + timestamp.getTime() +
+        enterText(_email, loadProperty.getProperty("Email") +dateStamp()+
                 "@gmail.com");
         //enter company name
         enterText(_company_name, loadProperty.getProperty("CompanyName"));
@@ -62,4 +63,6 @@ public class RegisterPage extends Utils {
         clickOnElement(_register_button);
         thread_Sleep();
     }
+
+
 }

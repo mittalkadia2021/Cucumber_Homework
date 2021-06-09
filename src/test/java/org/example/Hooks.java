@@ -15,7 +15,6 @@ import static com.sun.deploy.cache.Cache.copyFile;
 
 public class Hooks extends Utils {
 
-    String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
     Browser_Selector browser_selector = new Browser_Selector();
 
     @Before
@@ -23,6 +22,7 @@ public class Hooks extends Utils {
 
         browser_selector.open_Browser();
         driver.get("https://demo.nopcommerce.com/");
+
     }
 
     @After
@@ -32,7 +32,7 @@ public class Hooks extends Utils {
         //capture screenshot if test is fail
         if (scenario.isFailed()) {
             File sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            File destinationPath = new File(System.getProperty("user.dir") + "/target/Destination/screenshot/" + screenshotName);
+            File destinationPath = new File(System.getProperty("user.dir") + "/target/destination/screenshot/" + screenshotName);
 
             try {
                 copyFile(sourcePath, destinationPath);
@@ -47,5 +47,5 @@ public class Hooks extends Utils {
         close_Browser();
     }
 
-
 }
+

@@ -40,6 +40,7 @@ public class Online_Store_Page extends Utils {
 
     public void verify_Comment_Successfully_Added() {
         //to verify comment added successfully
+        thread_Sleep();
         Assert.assertEquals(get_Text_From_Element(_comment_Successfully_Added), "News comment is successfully added.", "Comment not added successfully");
 
         //print output

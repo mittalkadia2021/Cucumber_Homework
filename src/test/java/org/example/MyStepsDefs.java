@@ -1,8 +1,11 @@
 package org.example;
 
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import sun.security.util.Password;
 
 public class MyStepsDefs {
     HomePage homePage = new HomePage();
@@ -13,13 +16,13 @@ public class MyStepsDefs {
     Shopping_Cart_Page shopping_cart_page = new Shopping_Cart_Page();
     Sign_In_Page sign_in_page = new Sign_In_Page();
     Continue_Page continue_page = new Continue_Page();
-    Billing_Address billing_address =new Billing_Address();
-    Shipping_method_page shipping_method_page=new Shipping_method_page();
-    Payment_Method_Page payment_method_page= new Payment_Method_Page();
-    CardPayment_Details_Page cardPayment_details_page=new CardPayment_Details_Page();
-    Confirm_Order_Page confirm_order_page=new Confirm_Order_Page();
-    Buy_Jewellery_Product_Assert buy_jewellery_product_assert=new Buy_Jewellery_Product_Assert();
-
+    Billing_Address billing_address = new Billing_Address();
+    Shipping_method_page shipping_method_page = new Shipping_method_page();
+    Payment_Method_Page payment_method_page = new Payment_Method_Page();
+    CardPayment_Details_Page cardPayment_details_page = new CardPayment_Details_Page();
+    Confirm_Order_Page confirm_order_page = new Confirm_Order_Page();
+    Buy_Jewellery_Product_Assert buy_jewellery_product_assert = new Buy_Jewellery_Product_Assert();
+    Login_Page login_page = new Login_Page();
 
     //****************************Registration successfully  Scenario ************************
     @Given("^user is on register page$")
@@ -38,9 +41,9 @@ public class MyStepsDefs {
     }
 
     //**************************** User Able to select currency from drop down scenario **********************
+
     @Given("^User on home page$")
     public void user_on_home_page() {
-
     }
 
     @When("^User Select any one currency from drop down$")
@@ -53,7 +56,8 @@ public class MyStepsDefs {
         homePage.verify_Currency_Symbol_In_Each_Prices();
     }
 
-    //********************* Comments aAdded successfully ********************
+    //********************* Comments Added successfully ********************
+
     @When("^User click on online store is open$")
     public void user_click_on_online_store_is_open() {
         homePage.click_On_Online_Store_Is_Open();
@@ -110,14 +114,16 @@ public class MyStepsDefs {
     public void user_click_on_Sopping_cart_check_box_and_checkout() {
         shopping_cart_page.click_On_Checkout();
     }
+
     @When("^User enter Billing Address details$")
     public void user_enter_Billing_Address_details() {
-      billing_address.enter_Shipping_Address_Details();
+        billing_address.enter_Shipping_Address_Details();
 
     }
+
     @When("^User select shipping method and click on continue$")
     public void user_select_shipping_method_and_click_on_continue() {
-       shipping_method_page.click_On_NextDayAir();
+        shipping_method_page.click_On_NextDayAir();
     }
 
     @When("^User select payment method and click on continue$")
@@ -125,19 +131,55 @@ public class MyStepsDefs {
         payment_method_page.click_on_CreditCard_Payment();
 
     }
+
     @When("^User enter payment information and click on continue$")
-    public void user_enter_payment_information_and_click_on_continue()  {
-       cardPayment_details_page.enter_Card_Details();
+    public void user_enter_payment_information_and_click_on_continue() {
+        cardPayment_details_page.enter_Card_Details();
     }
+
     @When("^User click on confirm$")
     public void user_click_on_confirm() {
-       confirm_order_page.click_On_Confirm();
+        confirm_order_page.click_On_Confirm();
     }
 
     @Then("^User able to buy product successfully$")
-    public void user_able_to_buy_product_successfully()  {
+    public void user_able_to_buy_product_successfully() {
         buy_jewellery_product_assert.jewellery_Assert();
 
     }
+// **************************** LOGIN NEGATIVE SCENARIO *******************
+
+    @Given("^User is on homepage$")
+    public void userIsOnHomepage() {
+    }
+
+    @When("^User click on login$")
+    public void userClickOnLogin() {
+        homePage.click_On_Login();
+    }
+
+    @And("^User type \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userTypeAnd(String email, String password) {
+        login_page.enter_Username_Password(email, password);
+
+    }
+
+    @And("^User click on login button$")
+    public void userClickOnLoginButton() {
+        login_page.click_LoginButton();
+    }
+
+    @Then("^User should not able to login$")
+    public void userShouldNotAbleToLogin() {
+    }
+
+    @And("^User should get \"([^\"]*)\"$")
+    public void userShouldGet(String error_message) {
+
+        login_page.error_Message_Assert(error_message);
+
+
+    }
+
 
 }

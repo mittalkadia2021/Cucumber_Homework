@@ -16,6 +16,7 @@ public class HomePage extends Utils {
     private By _selectEuro = By.cssSelector("select[id$='Currency']");
     private By _onlineStore = By.xpath("(//a[@class=\"news-title\"])[1]");
     private By _click_On_Jewellery = By.xpath("(//a[@href=\"/jewelry\"])[1]");
+    private By _click_On_Login=By.cssSelector("a.ico-login");
 
 
     public void clickOnRegisterButton() {
@@ -56,5 +57,9 @@ public class HomePage extends Utils {
         //click on jewellery
         clickOnElement(_click_On_Jewellery);
 
+    }
+    public void click_On_Login(){
+        //click on login
+        clickOnElement(_click_On_Login);
     }
 }

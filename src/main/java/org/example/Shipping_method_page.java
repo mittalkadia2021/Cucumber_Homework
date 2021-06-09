@@ -17,7 +17,8 @@ public class Shipping_method_page extends Utils {
 //        Assert.assertEquals(Actual_Result,Expected_Result,"shipping method page is not open");
 //        //print output
 //        System.out.println("Shipping Page Assert ="+" "+loadProperty.getProperty("ShippingPageSOut"));
-       thread_Sleep();
+
+        thread_Sleep();
         //click on next day air
         clickOnElement(_click_OnNextDAyAir);
         //click on continue

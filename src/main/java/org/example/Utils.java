@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -70,10 +71,7 @@ public class Utils extends BasePage {
         select.selectByValue(text);
     }
 
-    //method for timestamp
-    public static String timeStamp(By by) {
-        return driver.findElement(by).getText();
-    }
+
 
     //webElement list method
     public static void list_Of_Product(By by) {
@@ -117,6 +115,15 @@ public class Utils extends BasePage {
         SimpleDateFormat format = new SimpleDateFormat("ddMMyyyyHHmmss");
         return format.format(new Date());
 
+    }
+    //method for timestamp
+    public static String timeStamp(By by) {
+        return driver.findElement(by).getText();
+
+
+    }
+    public void assertCurrentURL(String url){
+        Assert.assertTrue(driver.getCurrentUrl().equals(url));
     }
 
     //method for capturing screenshot
