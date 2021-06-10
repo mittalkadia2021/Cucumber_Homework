@@ -11,13 +11,14 @@ public class Shopping_Cart_Page extends Utils {
 
     public void click_On_Checkout() {
         //expected result
-        String Expected_Add_To_Cart_url = "https://demo.nopcommerce.com/cart";
+        String url = "https://demo.nopcommerce.com/cart";
+        assertCurrentURL(url);
         //actual result
-        String Actual_Add_To_Cart_url = driver.getCurrentUrl();
+        // String Actual_Add_To_Cart_url = driver.getCurrentUrl();
         //verify expected result  and actual result
-        Assert.assertEquals(Actual_Add_To_Cart_url, Expected_Add_To_Cart_url, "Shopping cart page is not open");
+        //Assert.assertEquals(Actual_Add_To_Cart_url, Expected_Add_To_Cart_url, "Shopping cart page is not open");
         //print output
-        System.out.println("Shopping page assert ="+" "+loadProperty.getProperty("ShoppingCartPageSOut"));
+        System.out.println("Shopping page assert =" + " " + loadProperty.getProperty("ShoppingCartPageSOut"));
         thread_Sleep();
         //click on check box
         clickOnElement(_checkBox);

@@ -21,7 +21,7 @@ public class CardPayment_Details_Page extends Utils {
 //        //verify actual result and expected result
 //        Assert.assertEquals(Actual_Result,Expected_Result,"Card payment page is not open");
 //        //print output
-     //  System.out.println("Card payment page Assert ="+""+loadProperty.getProperty("CardPaymentPageSOut"));
+        //  System.out.println("Card payment page Assert ="+""+loadProperty.getProperty("CardPaymentPageSOut"));
         //select credit card
         selectFromDropdownByVisibleText(_select_Credit_Card, loadProperty.getProperty("SelectCardPayment"));
 //enter cardholder name

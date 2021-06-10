@@ -7,7 +7,6 @@ import java.util.Properties;
 public class LoadProperty {
 
 
-
     static Properties prop;
     static FileInputStream input;
     // static String fileName = "config.properties";
@@ -16,7 +15,7 @@ public class LoadProperty {
     public String getProperty(String keyName) {
         prop = new Properties();
         try {
-            input = new FileInputStream(fileLocation );
+            input = new FileInputStream(fileLocation);
             prop.load(input);
             input.close();
         } catch (IOException e) {

@@ -19,31 +19,27 @@ public class Browser_Selector extends BasePage {
     public static final String AUTOMATE_USERNAME = "mittalkadia_c5AduX";
     public static final String AUTOMATE_ACCESS_KEY = "r56zcp2swxqvZhvxB5De";
     public static final String URL = "http://" + AUTOMATE_USERNAME + ":" + AUTOMATE_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
-    public static final boolean browserStack =true;
+    public static final boolean browserStack = false;
     DesiredCapabilities caps = new DesiredCapabilities();
 
 
     public void open_Browser() {
-        if (browserStack)
-        {
-            if (browserName.equalsIgnoreCase("chrome"))
-            {
+        if (browserStack) {
+            if (browserName.equalsIgnoreCase("chrome")) {
                 caps.setCapability("os", "Windows");
                 caps.setCapability("os_version", "10");
                 caps.setCapability("browser", "Chrome");
                 caps.setCapability("browser_version", "90.0");
                 caps.setCapability("browserstack.local", "false");
                 caps.setCapability("browserstack.selenium_version", "3.14.0");
-            } else if (browserName.equalsIgnoreCase("edge"))
-            {
+            } else if (browserName.equalsIgnoreCase("edge")) {
                 caps.setCapability("os", "Windows");
                 caps.setCapability("os_version", "7");
                 caps.setCapability("browser", "Edge");
                 caps.setCapability("browser_version", "latest");
                 caps.setCapability("browserstack.local", "false");
                 caps.setCapability("browserstack.selenium_version", "3.5.2");
-            } else if (browserName.equalsIgnoreCase("Firefox"))
-            {
+            } else if (browserName.equalsIgnoreCase("Firefox")) {
                 caps.setCapability("os", "Windows");
                 caps.setCapability("os_version", "8");
                 caps.setCapability("browser", "Firefox");
@@ -62,10 +58,10 @@ public class Browser_Selector extends BasePage {
 
         }
         //open locally
-        else
-            { if
+        else {
+            if
 
-         (browserName.equalsIgnoreCase("chrome")) {
+            (browserName.equalsIgnoreCase("chrome")) {
                 //setting up chromedriver path from your system
                 System.setProperty("webdriver.chrome.driver", "src/test/resources/BrowserDriver/chromedriver.exe");
                 //creating object for driver

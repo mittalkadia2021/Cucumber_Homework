@@ -72,7 +72,6 @@ public class Utils extends BasePage {
     }
 
 
-
     //webElement list method
     public static void list_Of_Product(By by) {
         List<WebElement> compareProductList = driver.findElements(by);
@@ -116,13 +115,15 @@ public class Utils extends BasePage {
         return format.format(new Date());
 
     }
+
     //method for timestamp
     public static String timeStamp(By by) {
         return driver.findElement(by).getText();
 
 
     }
-    public void assertCurrentURL(String url){
+
+    public void assertCurrentURL(String url) {
         Assert.assertTrue(driver.getCurrentUrl().equals(url));
     }
 
@@ -135,8 +136,9 @@ public class Utils extends BasePage {
             e.printStackTrace();
         }
     }
+
     //method for close browser
-    public static void close_Browser(){
+    public static void close_Browser() {
         driver.quit();
     }
 }

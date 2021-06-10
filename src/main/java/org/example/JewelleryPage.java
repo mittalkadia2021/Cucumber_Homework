@@ -12,13 +12,11 @@ public class JewelleryPage extends Utils {
 
     public void click_on_vintage_Style_Engagement_Ring() {
         //expected result
-        String Expected_jewellery_url = "https://demo.nopcommerce.com/jewelry";
-        //Actual result
-        String Actual_Jewellery_url = driver.getCurrentUrl();
-        //verify actual result and expected result
-        Assert.assertEquals(Actual_Jewellery_url, Expected_jewellery_url, "jewellery page is not open");
+        String url = "https://demo.nopcommerce.com/jewelry";
+        //verify url
+        assertCurrentURL(url);
         //print output
-        System.out.println("Jewellery page assert ="+" "+loadProperty.getProperty("JewelleryURLSOut"));
+        System.out.println("Jewellery page assert =" + " " + loadProperty.getProperty("JewelleryURLSOut"));
         //click on add to cart
         thread_Sleep();
         clickOnElement(_clickAddToCart);

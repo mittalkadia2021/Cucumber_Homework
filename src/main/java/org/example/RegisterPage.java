@@ -24,12 +24,13 @@ public class RegisterPage extends Utils {
     private By _register_button = By.xpath("//button[contains(text(),'Register')]");
 
 
-
     public void registration_Successfully() {
+        //String url=("https://demo.nopcommerce.com/register?returnUrl=%2Fcart");
+        //assertCurrentURL(url);
 //        String Expected_url="https://demo.nopcommerce.com/register?returnUrl=%2Fcart";
 //        String Actual_url=driver.getCurrentUrl();
 //        Assert.assertEquals(Actual_url,Expected_url,"Register page is not open");
-//        System.out.println("Register page assert ="+" "+loadProperty.getProperty("RegisterPageSOut"));
+        //System.out.println("Register page assert ="+" "+loadProperty.getProperty("RegisterPageSOut"));
 
         //click on gender
         thread_Sleep();
@@ -38,7 +39,7 @@ public class RegisterPage extends Utils {
         thread_Sleep();
         enterText(_firstName, loadProperty.getProperty("Firstname"));
         //type last name
-        waitForClickable(_lastname,10);
+        waitForClickable(_lastname, 10);
         enterText(_lastname, loadProperty.getProperty("Lastname"));
         //enter date of birth
         thread_Sleep();
@@ -49,7 +50,7 @@ public class RegisterPage extends Utils {
         thread_Sleep();
         selectFromDropdownByVisibleText(_birth_year, loadProperty.getProperty("BirthYear"));
         //Type email with timestamp
-        enterText(_email, loadProperty.getProperty("Email") +dateStamp()+
+        enterText(_email, loadProperty.getProperty("Email") + dateStamp() +
                 "@gmail.com");
         //enter company name
         enterText(_company_name, loadProperty.getProperty("CompanyName"));
