@@ -11,7 +11,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.sun.deploy.cache.Cache.copyFile;
+import static org.apache.commons.io.FileUtils.copyFile;
+
 
 public class Hooks extends Utils {
 

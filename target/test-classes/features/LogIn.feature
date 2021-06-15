@@ -1,3 +1,5 @@
+@Regression
+
 Feature: Login Functionality
 
   Background:

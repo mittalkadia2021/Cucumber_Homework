@@ -1,3 +1,5 @@
+
+@Regression
 Feature: Register User able Purchase jewellery successfully
 
   @JewelleryPurchase

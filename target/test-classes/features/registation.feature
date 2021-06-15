@@ -1,4 +1,4 @@
-
+@Regression
 Feature: User able to register successfully.
   @Registration
   Scenario: user should be able to register successfully

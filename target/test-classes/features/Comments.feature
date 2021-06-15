@@ -1,3 +1,5 @@
+@Regression
+
 Feature: User able to add comments
 
 

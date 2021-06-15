@@ -1,3 +1,5 @@
+@Regression
+
 Feature: Currency verification
   @Currency
   Scenario: User should be able to change currency from drop down
