@@ -20,8 +20,9 @@ public class Browser_Selector extends BasePage {
     public static final String AUTOMATE_USERNAME = "mittalkadia_c5AduX";
     public static final String AUTOMATE_ACCESS_KEY = "r56zcp2swxqvZhvxB5De";
     public static final String URL = "http://" + AUTOMATE_USERNAME + ":" + AUTOMATE_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
-    public static final boolean browserstack=Boolean.parseBoolean(System.getProperty("browserstack"));
-    public static final boolean browserStack = false;
+    public static final boolean browserStack=Boolean.parseBoolean(System.getProperty("browserStack"));
+
+    //public static final boolean browserStack = true;
     DesiredCapabilities caps = new DesiredCapabilities();
 
 

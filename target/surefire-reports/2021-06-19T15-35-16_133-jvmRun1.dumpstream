@@ -1,0 +1,82 @@
+# Created at 2021-06-19T15:35:42.589
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2021-06-19T15:35:45.219
+Unexpected IOException with stream: Currency Verified successfully:Euro as €
+
+
+# Created at 2021-06-19T15:35:46.190
+Unexpected IOException with stream: 
+
+
+# Created at 2021-06-19T15:35:46.196
+Unexpected IOException with stream:   @Currency
+
+
+# Created at 2021-06-19T15:35:46.201
+Unexpected IOException with stream:   Scenario: User should be able to change currency from drop down           [90m# src/test/resources/features/Currency.feature:5[0m
+
+
+# Created at 2021-06-19T15:35:46.203
+Unexpected IOException with stream:     [32mGiven [0m[32mUser on home page[0m                                                 [90m# MyStepsDefs.user_on_home_page()[0m
+
+
+# Created at 2021-06-19T15:35:46.205
+Unexpected IOException with stream:     [32mWhen [0m[32mUser Select any one currency from drop down[0m                        [90m# MyStepsDefs.user_Select_any_one_currency_from_drop_down()[0m
+
+
+# Created at 2021-06-19T15:35:46.208
+Unexpected IOException with stream:     [32mThen [0m[32mVerify all product currency same as select currency from drop down[0m [90m# MyStepsDefs.verify_all_product_currency_same_as_select_currency_from_drop_down()[0m
+
+
+# Created at 2021-06-19T15:35:46.229
+Unexpected IOException with stream: 
+
+
+# Created at 2021-06-19T15:35:46.231
+Unexpected IOException with stream: 2
+
+# Created at 2021-06-19T15:35:46.232
+Unexpected IOException with stream:  Scenarios (
+
+# Created at 2021-06-19T15:35:46.233
+Unexpected IOException with stream: [32m2 passed[0m
+
+# Created at 2021-06-19T15:35:46.235
+Unexpected IOException with stream: )
+
+
+# Created at 2021-06-19T15:35:46.241
+Unexpected IOException with stream: 8
+
+# Created at 2021-06-19T15:35:46.242
+Unexpected IOException with stream:  Steps (
+
+# Created at 2021-06-19T15:35:46.246
+Unexpected IOException with stream: [32m8 passed[0m
+
+# Created at 2021-06-19T15:35:46.247
+Unexpected IOException with stream: )
+
+
+# Created at 2021-06-19T15:35:46.250
+Unexpected IOException with stream: 0m
+
+# Created at 2021-06-19T15:35:46.252
+Unexpected IOException with stream: 26.463s
+
+
+# Created at 2021-06-19T15:35:46.253
+Unexpected IOException with stream: 
+
+
+# Created at 2021-06-19T15:35:46.457
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGDirectoryTestSuite,org.example.RunTest,null,null,null
+
+
